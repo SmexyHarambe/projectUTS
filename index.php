@@ -11,6 +11,6 @@
     <body>
        <button><a href="hasil.php">Lihat Hasil</a></button>
        <button><a href="setting.php">Lihat Setting</a></button>
-       <h1>hello world</h1>
+       
     </body>
 </html>
