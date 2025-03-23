@@ -1,30 +1,41 @@
-<html>
-    <head>
-        
-    </head>
-    <body>
-        <h1 style="font-weight: lighter;">Halaman hasil</h1>
-        <p>Setting yang tersedia: </p>
-        <textarea style="height: 150px; width: 450px;"></textarea>
-        <br><a href="setting.php" style="color: blue;">ganti setting</a>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Optio, vel dolor iure amet molestias consequuntur totam 
-            excepturi dicta a tempora earum aut dolorum officia porro 
-            eligendi hic! Expedita quibusdam, est atque corrupti consectetur 
-            quam sapiente libero animi quasi iste recusandae doloremque 
-            fugiat eos veritatis! Alias consequuntur cupiditate repellat 
-            inventore ducimus quos numquam. Laboriosam blanditiis perferendis 
-            vero nulla reiciendis? Laboriosam nobis ex, quisquam non eum 
-            dolor nihil soluta exercitationem ipsum iste earum libero excepturi 
-            deleniti ullam iure neque accusantium quae enim maiores pariatur 
-            velit eos sed? Saepe at in officiis ipsam cumque quod? Explicabo 
-            soluta quisquam, voluptas voluptates vitae consequatur repellendus 
-            temporibus ad obcaecati fugit facilis unde? Tenetur quia repudiandae 
-            ex vero soluta provident, exercitationem iste dolorum nobis atque 
-            necessitatibus maxime odit ad sit expedita id possimus perspiciatis 
-            molestias quasi aut ipsum magni fuga earum optio! Deserunt adipisci 
-            odio eveniet pariatur, earum porro quidem, at ullam, itaque inventore 
-            optio accusantium eligendi.
-        
-    </body>
+<?php
+$textAlign = isset($_COOKIE['text-align']) ? $_COOKIE['text-align'] : 'Left';
+$fontFamily = isset($_COOKIE['font-family']) ? $_COOKIE['font-family'] : 'Arial';
+$color = isset($_COOKIE['color']) ? $_COOKIE['color'] : '#000000';
+
+$choice = ''; 
+if (isset($_COOKIE['text-align']) && isset($_COOKIE['font-family']) && isset($_COOKIE['color'])) {
+    $choice = "p {\n";
+    $choice .= "    text-align: " . $textAlign . ";\n";
+    $choice .= "    font-family: " . $fontFamily . ";\n"; 
+    $choice .= "    color: " . $color . ";\n"; 
+    $choice .= "}\n";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil</title>
+    <style>
+        .custom {
+            text-align: <?php echo $textAlign; ?>;
+            font-family: <?php echo $fontFamily; ?>;
+            color: <?php echo $color; ?>;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-weight: lighter;">Halaman Hasil</h1>
+    <p>Setting yang tersedia: </p>
+    <textarea readonly style="width: 250px; height: 100px;">
+        <?php echo $choice; ?>
+    </textarea>
+    <br>
+    <a href="setting.php">Ganti Setting</a>
+    <p class="custom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias praesentium cum a quo molestiae accusamus cupiditate laborum sed laboriosam, cumque vitae est corporis, inventore voluptatibus velit accusantium blanditiis modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam in officiis voluptatem distinctio. Repellat amet quasi nam recusandae! Ad dolorem impedit officia architecto accusantium eveniet suscipit reprehenderit officiis exercitationem nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione ipsum aut tempore beatae assumenda rem et repudiandae, non est repellendus laudantium, tempora nostrum architecto quisquam aliquid nobis ducimus id! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor debitis labore laboriosam inventore architecto aliquam molestiae aliquid est placeat id, nesciunt quae eligendi, quisquam velit dolores soluta! At, aspernatur nesciunt.</p>
+    
+</body>
 </html>
