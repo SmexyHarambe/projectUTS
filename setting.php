@@ -21,7 +21,7 @@ $color = isset($_COOKIE['color']) ? $_COOKIE['color'] : '#000000';
     <title>Halaman Setting</title>
 </head>
 <body>
-    <h1>Setting Page</h1>
+    <h1>Halaman Setting</h1>
     <form method="POST" action="">
         <label for="text-align">Text Align:</label>
         <select name="text-align" id="text-align">
