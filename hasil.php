@@ -28,7 +28,7 @@ if (isset($_COOKIE['text-align']) && isset($_COOKIE['font-family']) && isset($_C
     </style>
 </head>
 <body>
-    <h1 style="font-weight: lighter;">Halaman Hasil</h1>
+    <h1>Halaman Hasil</h1>
     <p>Setting yang tersedia: </p>
     <textarea readonly style="width: 250px; height: 100px;">
         <?php echo $choice; ?>
