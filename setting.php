@@ -13,37 +13,34 @@ $fontFamily = isset($_COOKIE['font-family']) ? $_COOKIE['font-family'] : '';
 $color = isset($_COOKIE['color']) ? $_COOKIE['color'] : '#000000'; 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Setting</title>
-</head>
-<body>
-    <h1>Setting Page</h1>
-    <form method="POST" action="">
-        <label for="text-align">Text Align:</label>
-        <select name="text-align" id="text-align">
-            <option value="" disabled <?php if($textAlign == '') echo 'selected'; ?>>-- Pilih Text Align --</option>
-            <option value="left" <?php if($textAlign == 'left') echo 'selected'; ?>>Left</option>
-            <option value="right" <?php if($textAlign == 'right') echo 'selected'; ?>>Right</option>
-            <option value="center" <?php if($textAlign == 'center') echo 'selected'; ?>>Center</option>
-            <option value="justify" <?php if($textAlign == 'justify') echo 'selected'; ?>>Justify</option>
-        </select>
-        <br>
-        <label for="font-family">Font Family:</label>
-        <select name="font-family" id="font-family">
-            <option value="" disabled <?php if($fontFamily == '') echo 'selected'; ?>>-- Pilih Font Family --</option>
-            <option value="Arial" <?php if($fontFamily == 'Arial') echo 'selected'; ?>>Arial</option>
-            <option value="Tahoma" <?php if($fontFamily == 'Tahoma') echo 'selected'; ?>>Tahoma</option>
-            <option value="Calibri" <?php if($fontFamily == 'Calibri') echo 'selected'; ?>>Calibri</option>
-        </select>
-        <br>
-        <label for="color">Color:</label>
-        <input type="color" name="color" id="color" value="<?php echo $color; ?>">
-        <br>
-        <button type="submit">Simpan</button>
-    </form>
-</body>
+<html>
+    <head>
+        <title>Halaman Setting</title>
+    </head>
+    <body>
+        <h1>Halaman Setting</h1>
+        <form method="POST" action="">
+            <label for="text-align">Text Align:</label>
+            <select name="text-align" id="text-align">
+                <option value="" disabled <?php if($textAlign == '') echo 'selected'; ?>>-- Pilih Text Align --</option>
+                <option value="left" <?php if($textAlign == 'left') echo 'selected'; ?>>Left</option>
+                <option value="right" <?php if($textAlign == 'right') echo 'selected'; ?>>Right</option>
+                <option value="center" <?php if($textAlign == 'center') echo 'selected'; ?>>Center</option>
+                <option value="justify" <?php if($textAlign == 'justify') echo 'selected'; ?>>Justify</option>
+            </select>
+            <br>
+            <label for="font-family">Font Family:</label>
+            <select name="font-family" id="font-family">
+                <option value="" disabled <?php if($fontFamily == '') echo 'selected'; ?>>-- Pilih Font Family --</option>
+                <option value="Arial" <?php if($fontFamily == 'Arial') echo 'selected'; ?>>Arial</option>
+                <option value="Tahoma" <?php if($fontFamily == 'Tahoma') echo 'selected'; ?>>Tahoma</option>
+                <option value="Calibri" <?php if($fontFamily == 'Calibri') echo 'selected'; ?>>Calibri</option>
+            </select>
+            <br>
+            <label for="color">Color:</label>
+            <input type="color" name="color" id="color" value="<?php echo $color; ?>">
+            <br>
+            <button type="submit">Simpan</button>
+        </form>
+    </body>
 </html>
